@@ -22,7 +22,7 @@ const TempoVoltas = (props) => {
 
 const Button = (props) => {
   return(
-    <button onclick={props.onclick}>{props.text}</button>
+    <button onClick={props.onclick}>{props.text}</button>
   );
 }
 export default function App() {
