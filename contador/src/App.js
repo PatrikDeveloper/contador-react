@@ -1,26 +1,55 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+const MostrarVoltas = (props) => {
+  return(
+    <p>
+      {props.totalVoltas}<br />
+      {props.text}
+    </p>
+  );
+}
+
+const TempoVoltas = (props) => {
+  return(
+    <p>
+      {props.tempoMedio}<br />
+      {props.text}
+    </p>
+  );
+}
+
+const Button = (props) => {
+  return(
+    <button>{props.text}</button>
+  );
+}
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <MostrarVoltas
+        totalVoltas='10'
+        text='Voltas'
+      />
+      <Button 
+        text='+'
+      />
+      <Button 
+        text='-'
+      />
+      <TempoVoltas
+        tempoMedio='01:30'
+        text='Tempo Médio Por Voltas'
+      />
+     <Button
+      text='Iniciar'
+     />Iniciar
+     <Button
+      text='Reiniciar'
+     />
     </div>
   );
 }
 
-export default App;
