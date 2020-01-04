@@ -22,13 +22,13 @@ const TempoVoltas = (props) => {
 
 const Button = (props) => {
   return(
-    <button>{props.text}</button>
+    <button onclick={props.onclick}>{props.text}</button>
   );
 }
 export default function App() {
   
   let numVoltas = 0;
-  const encrementar = () => {
+  const incrementar = () => {
     numVoltas++;
   }
 
@@ -45,7 +45,7 @@ export default function App() {
       />
       <Button 
         text='+'
-        onclick={encrementar}
+        onclick={incrementar}
       />
       <Button 
         text='-'
