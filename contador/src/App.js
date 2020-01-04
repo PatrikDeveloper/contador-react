@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 
@@ -27,15 +27,15 @@ const Button = (props) => {
 }
 export default function App() {
   
-  let numVoltas = 0;
+  const [numVoltas, setNumVoltas] = useState(0);
+
   const incrementar = () => {
-    numVoltas++;
+    setNumVoltas(numVoltas + 1);
   }
 
-  const descrementar = () => {
-    numVoltas--;
+  const decrementar = () => {
+    setNumVoltas(numVoltas - 1);
   }
-
 
   return (
     <div className="App">
@@ -49,7 +49,7 @@ export default function App() {
       />
       <Button 
         text='-'
-        onclick={descrementar}
+        onclick={decrementar}
       />
       <TempoVoltas
         tempoMedio='01:30'
