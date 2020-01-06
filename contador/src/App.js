@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 
@@ -34,13 +34,39 @@ const Button = (props) => {
 }
 export default function App() {
   
-  let numVoltas = 0;
+  const [numVoltas, setNumVoltas] = useState(0);
+  const [running, setRunning] = useState(false);
+  const [tempo, setTempo] = useState(0);
+  
+  useEffect(() => {
+    let timer = null;
+    if (running) {
+      timer = setInterval(() => {
+        setTempo(old => old +1)
+      }, 1000);
+    }
+    return() => {
+      if (timer) {
+        clearInterval(timer);
+      }
+    }
+  });
+  
+  const toogleRunning = () => {
+    setRunning(!running);
+  }
+
   const incrementar = () => {
     setNumVoltas(numVoltas + 1);
   }
 
   const decrementar = () => {
     setNumVoltas(numVoltas - 1);
+  }
+
+  const reiniciar = () => {
+    setTempo(0);
+
   }
 
 
