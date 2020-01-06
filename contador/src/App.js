@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 
 
@@ -12,9 +12,16 @@ const MostrarVoltas = (props) => {
 }
 
 const TempoVoltas = (props) => {
+
+  const tempo = props.tempoMedio;
+  const minutos = Math.round(tempo / 60);
+  const segundos = tempo % 60;
+  const minutosStr = minutos < 10 ? '0' + minutos : minutos;
+  const segundosStr = segundos < 10 ? '0' + segundos : segundos;
+
   return(
     <p>
-      {props.tempoMedio}<br />
+      {`${minutosStr}:${segundosStr}`}<br />
       {props.text}
     </p>
   );
@@ -27,8 +34,7 @@ const Button = (props) => {
 }
 export default function App() {
   
-  const [numVoltas, setNumVoltas] = useState(0);
-
+  let numVoltas = 0;
   const incrementar = () => {
     setNumVoltas(numVoltas + 1);
   }
@@ -36,6 +42,7 @@ export default function App() {
   const decrementar = () => {
     setNumVoltas(numVoltas - 1);
   }
+
 
   return (
     <div className="App">
@@ -51,13 +58,21 @@ export default function App() {
         text='-'
         onclick={decrementar}
       />
-      <TempoVoltas
-        tempoMedio='01:30'
-        text='Tempo Médio Por Voltas'
-      />
-     <Button text='Iniciar' />
-     <Button text='Reiniciar'/>
+      {
+        numVoltas > 0 && 
+          <TempoVoltas
+            tempoMedio={Math.round(tempo / numVoltas)}
+            text='Tempo Médio Por Voltas'
+          />
+      }
+     <Button 
+      onclick={toogleRunning}
+      text='Iniciar' />
+     <Button 
+     onclick={reiniciar}
+     text='Reiniciar'/>
+     
     </div>
-  );
-}
+ );
+} 
 
