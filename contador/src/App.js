@@ -1,37 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import MostrarVoltas from './components/MostrarVoltas';
+import TempoVoltas from './components/TempoVoltas';
+import Button from './components/Button'
 
-
-const MostrarVoltas = (props) => {
-  return(
-    <p>
-      {props.totalVoltas}<br />
-      {props.text}
-    </p>
-  );
-}
-
-const TempoVoltas = (props) => {
-
-  const tempo = props.tempoMedio;
-  const minutos = Math.round(tempo / 60);
-  const segundos = tempo % 60;
-  const minutosStr = minutos < 10 ? '0' + minutos : minutos;
-  const segundosStr = segundos < 10 ? '0' + segundos : segundos;
-
-  return(
-    <p>
-      {`${minutosStr}:${segundosStr}`}<br />
-      {props.text}
-    </p>
-  );
-}
-
-const Button = (props) => {
-  return(
-    <button onClick={props.onclick}>{props.text}</button>
-  );
-}
 export default function App() {
   
   const [numVoltas, setNumVoltas] = useState(0);
