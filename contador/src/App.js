@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import MostrarVoltas from './components/MostrarVoltas';
 import TempoVoltas from './components/TempoVoltas';
-import Button from './components/Button'
+import Button from './components/Button';
+import './assets/css/app.css';
 
 export default function App() {
   
@@ -40,35 +41,35 @@ export default function App() {
 
   }
 
-
   return (
     <div className="App">
-      <MostrarVoltas
-        totalVoltas={numVoltas}
-        text='Voltas'
-      />
+      <div id='Wrapper'>
+        <MostrarVoltas
+          totalVoltas={numVoltas}
+          text='Voltas'
+        />
+        <Button 
+          text='+'
+          onclick={incrementar}
+        />
+        <Button 
+          text='-'
+          onclick={decrementar}
+        />
+        {
+          numVoltas > 0 && 
+            <TempoVoltas
+              tempoMedio={Math.round(tempo / numVoltas)}
+              text='Tempo Médio Por Voltas'
+            />
+        }
       <Button 
-        text='+'
-        onclick={incrementar}
-      />
+        onclick={toogleRunning}
+        text='Iniciar' />
       <Button 
-        text='-'
-        onclick={decrementar}
-      />
-      {
-        numVoltas > 0 && 
-          <TempoVoltas
-            tempoMedio={Math.round(tempo / numVoltas)}
-            text='Tempo Médio Por Voltas'
-          />
-      }
-     <Button 
-      onclick={toogleRunning}
-      text='Iniciar' />
-     <Button 
-     onclick={reiniciar}
-     text='Reiniciar'/>
-     
+      onclick={reiniciar}
+      text='Reiniciar'/>
+    </div>
     </div>
  );
 } 
