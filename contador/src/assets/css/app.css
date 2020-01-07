@@ -3,19 +3,27 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('https://heyon.com.br/wp-content/uploads/2018/02/heyonajuda-background.jpg');
+  background-image: url('http://i.stack.imgur.com/vhoa0.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #Wrapper {
   margin: 30px auto;
   width: 800px;
-  padding: 20px;
+  padding: 0 20px;
   text-align: center;
   font-size: 60px;
   font-weight: bold;
   color: #4ec6ea;
-  background-color: white;
-  border: 5px solid #ccc;
+  background: rgba(240, 248, 255);
+  border: 5px solid #4ec6ea;
+  border-radius: 10px;
+}
+
+button {
+  padding: 5px 30px;
+  margin: 2px;
 }
 
 

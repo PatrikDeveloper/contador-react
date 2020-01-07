@@ -44,31 +44,26 @@ export default function App() {
   return (
     <div className="App">
       <div id='Wrapper'>
-        <MostrarVoltas
-          totalVoltas={numVoltas}
-          text='Voltas'
-        />
-        <Button 
-          text='+'
-          onclick={incrementar}
-        />
-        <Button 
-          text='-'
-          onclick={decrementar}
-        />
-        {
-          numVoltas > 0 && 
-            <TempoVoltas
-              tempoMedio={Math.round(tempo / numVoltas)}
-              text='Tempo Médio Por Voltas'
-            />
-        }
-      <Button 
-        onclick={toogleRunning}
-        text='Iniciar' />
-      <Button 
-      onclick={reiniciar}
-      text='Reiniciar'/>
+        <div id='Wrapper-title'> 
+          <MostrarVoltas totalVoltas={numVoltas} text='Voltas' />
+        </div>
+        <div id='Wrapper-button'>
+          <Button text='+' onclick={incrementar} />
+          <Button text='-' onclick={decrementar} />
+        </div>
+        <div>
+          {
+            numVoltas > 0 && 
+              <TempoVoltas
+                tempoMedio={Math.round(tempo / numVoltas)}
+                text='Tempo Médio Por Voltas'
+              />
+          }
+        </div>
+        <div>
+          <Button onclick={toogleRunning} text='Iniciar' />
+          <Button onclick={reiniciar} text='Reiniciar'/>
+        </div>
     </div>
     </div>
  );
