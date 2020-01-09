@@ -33,7 +33,10 @@ export default function App() {
   }
 
   const decrementar = () => {
-    setNumVoltas(numVoltas - 1);
+    if(numVoltas > 0) {
+      setNumVoltas(numVoltas - 1);
+  
+    }
   }
 
   const reiniciar = () => {
@@ -59,7 +62,7 @@ export default function App() {
         <div>
           <Button text='+' onclick={incrementar}/>
           <Button text='-' onclick={decrementar} />
-          <Button onclick={toogleRunning} text='Iniciar' />
+          <Button onclick={toogleRunning} text={running ? 'Pausar' : 'Iniciar'} />
           <Button onclick={reiniciar} text='Reiniciar'/>
         </div>
     </div>
