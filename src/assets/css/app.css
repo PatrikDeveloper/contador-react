@@ -3,7 +3,7 @@ body {
   padding: 0;
   background-image: url('http://i.stack.imgur.com/vhoa0.jpg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center ;
   text-shadow: 2px 1px 1px #4ec6ea;
   font-family: Helvetica;
 }
