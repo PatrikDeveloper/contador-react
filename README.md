@@ -1,3 +1,3 @@
-# UM PROJETO SIMPLES UTILIZANDO REACT BÁSICO e CSS BÁSICO
+# UM PROJETO SIMPLES UTILIZANDO REACT BÁSICO E CSS BÁSICO
 
-![image](./assets/img/screenshot.png);
+<img src='assets/img/screenshot.png'>
