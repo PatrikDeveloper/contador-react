@@ -1,9 +1,10 @@
 import React from 'react';
 
+
 const MostrarVoltas = (props) => {
   return(
     <p>
-      {props.totalVoltas}<br />
+      {props.totalVoltas}
       {props.text}
     </p>
   );

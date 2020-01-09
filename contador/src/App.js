@@ -47,10 +47,6 @@ export default function App() {
         <div id='Wrapper-title'> 
           <MostrarVoltas totalVoltas={numVoltas} text='Voltas' />
         </div>
-        <div id='Wrapper-button'>
-          <Button text='+' onclick={incrementar} />
-          <Button text='-' onclick={decrementar} />
-        </div>
         <div>
           {
             numVoltas > 0 && 
@@ -61,11 +57,13 @@ export default function App() {
           }
         </div>
         <div>
+          <Button text='+' onclick={incrementar} />
+          <Button text='-' onclick={decrementar} />
           <Button onclick={toogleRunning} text='Iniciar' />
           <Button onclick={reiniciar} text='Reiniciar'/>
         </div>
     </div>
-    </div>
+  </div>
  );
 } 
 
