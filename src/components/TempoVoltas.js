@@ -10,7 +10,9 @@ const TempoVoltas = (props) => {
 
   return(
     <p>
-      {`${minutosStr}:${segundosStr}`}<br />
+      <div id='Wrapper-number'>
+        {`${minutosStr}:${segundosStr}`}<br />
+      </div>
       {props.text}
     </p>
   );

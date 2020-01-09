@@ -57,7 +57,7 @@ export default function App() {
           }
         </div>
         <div>
-          <Button text='+' onclick={incrementar} />
+          <Button text='+' onclick={incrementar}/>
           <Button text='-' onclick={decrementar} />
           <Button onclick={toogleRunning} text='Iniciar' />
           <Button onclick={reiniciar} text='Reiniciar'/>

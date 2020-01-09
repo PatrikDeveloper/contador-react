@@ -1,11 +1,11 @@
 import React from 'react';
-
+import './../assets/css/app.css'
 
 const MostrarVoltas = (props) => {
   return(
     <p>
-      {props.totalVoltas}
-      {props.text}
+      <div id='Wrapper-number'>{props.totalVoltas}</div>
+      <div id='Wrapper-text'>{props.text}</div>
     </p>
   );
 }

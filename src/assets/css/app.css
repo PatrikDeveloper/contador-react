@@ -4,18 +4,19 @@ body {
   background-image: url('http://i.stack.imgur.com/vhoa0.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  text-shadow: 1px 1px 1px #4ec6ea;
+  text-shadow: 2px 1px 1px #4ec6ea;
+  font-family: Helvetica;
 }
 
 #Wrapper {
-  margin: 30px auto;
+  margin: 50px auto;
   width: 800px;
   padding: 50px 20px;
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
   font-weight: bold;
   color: #4ec6ea;
-  background: rgba(240, 248, 255);
+  background: rgb(243, 243, 243);
   border: 5px solid #4ec6ea;
   border-radius: 10px;
 }
@@ -24,7 +25,7 @@ button {
   padding:15px 70px;
   margin: 10px;
   font-size: 17px;
-  background-color: white;
+  background-color: #fefefe;
   border: 1px solid #4ec6ea;
   cursor: pointer;
   border-radius: 5px;
@@ -34,7 +35,11 @@ button {
 }
 
 button:hover {
-  color: blue;
+  color: #ccc;
+}
+
+#Wrapper-number {
+  font-size: 120px;
 }
 
 
