@@ -1,3 +1,3 @@
 # UM PROJETO SIMPLES UTILIZANDO REACT BÁSICO E CSS BÁSICO
 
-<img src='assets/img/screenshot.png'>
+![](https://github.com/PatrikDeveloper/contador-react/blob/master/src/assets/img/screenshot.png);
